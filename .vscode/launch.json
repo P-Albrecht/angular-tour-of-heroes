@@ -2,19 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "msedge",
+      "type": "chrome",
       "request": "launch",
-      "name": "Start app headless",
+      "name": "Start app with Chrome",
       "url": "http://localhost:4200",
-      "runtimeArgs": ["--headless"],
       "preLaunchTask": "npm: start",
       "webRoot": "${workspaceFolder}"
     },
     {
-      "type": "msedge",
+      "type": "chrome",
       "request": "launch",
-      "name": "Start app and launch Edge",
+      "name": "Start app headless",
       "url": "http://localhost:4200",
+      "runtimeArgs": ["--headless"],
       "preLaunchTask": "npm: start",
       "webRoot": "${workspaceFolder}"
     }
