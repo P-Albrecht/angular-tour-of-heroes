@@ -36,7 +36,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "https://excd.github.io/angular-tour-of-heroes/"
             },
             "development": {
               "buildOptimizer": false,
