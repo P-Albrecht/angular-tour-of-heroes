@@ -5,7 +5,11 @@
     <input id="new-hero" #heroName />
   </label>
 
-  <button type="button" (click)="add(heroName.value); heroName.value = ''">
+  <button
+    type="button"
+    class="add-button"
+    (click)="add(heroName.value); heroName.value = ''"
+  >
     Add hero
   </button>
 </div>
