@@ -4,9 +4,10 @@ label {
   font-weight: bold;
 }
 input {
-  font-size: 1em;
+  font-size: 1rem;
   padding: 0.5rem;
 }
+
 button {
   margin-top: 20px;
   margin-right: 0.5rem;
@@ -16,7 +17,7 @@ button {
   font-size: 1rem;
 }
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #42545c;
 }
 button:disabled {
   background-color: #eee;

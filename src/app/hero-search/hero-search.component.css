@@ -1,5 +1,4 @@
 /* HeroSearch private styles */
-
 label {
   display: block;
   font-weight: bold;
@@ -7,6 +6,7 @@ label {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+
 input {
   padding: 0.5rem;
   width: 100%;
@@ -14,7 +14,6 @@ input {
   box-sizing: border-box;
   display: block;
 }
-
 input:focus {
   outline: #336699 auto 1px;
 }
@@ -29,17 +28,15 @@ li {
   display: inline-block;
   width: 100%;
   max-width: 600px;
-  padding: 0.5rem;
+  padding: 0.5em;
   box-sizing: border-box;
   text-decoration: none;
   color: black;
 }
-
 .search-result li a:hover {
   background-color: #435a60;
   color: white;
 }
-
 ul.search-result {
   margin-top: 0;
   padding-left: 0;

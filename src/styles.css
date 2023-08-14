@@ -1,4 +1,17 @@
 /* Application-wide Styles */
+html {
+  height: 100%;
+}
+body {
+  height: inherit;
+  margin: 0;
+}
+body,
+input[type="text"],
+button {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,18 +19,11 @@ h1 {
 }
 h2,
 h3 {
-  color: #444;
+  color: #808080;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
-body,
-input[type="text"],
-button {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
+a {
+  color: rgb(110, 110, 255);
 }
 button {
   background-color: #eee;
@@ -39,6 +45,13 @@ button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;
+}
+
+app-root {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* everywhere else */
