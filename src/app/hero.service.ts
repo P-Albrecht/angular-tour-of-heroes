@@ -3,18 +3,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-import { Hero } from './hero';
 import { MessageService } from './message.service';
+
+import { Hero } from './hero';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeroService {
+  private heroesUrl: string = 'api/heroes'; // URL to web api.
+
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
-
-  private heroesUrl = 'api/heroes'; // URL to web api.
 
   constructor(
     private http: HttpClient,
