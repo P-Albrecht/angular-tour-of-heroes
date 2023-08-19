@@ -9,8 +9,8 @@ nav a {
   margin-top: 10px;
   margin-right: 0.2rem;
   display: inline-block;
-  background-color: #e8e8e8;
   color: #3d3d3d;
+  background-color: #e8e8e8;
   border-radius: 4px;
 }
 nav a:hover {
@@ -51,14 +51,12 @@ footer p {
 }
 
 div#app {
-  flex-grow: 1;
   padding: 2rem;
-}
-div#app.lightTheme {
-  background-color: white;
+  flex-grow: 1;
   color: black;
+  background-color: white;
 }
-div#app.darkTheme {
-  background-color: rgb(32, 32, 32);
+div#app.dark {
   color: white;
+  background-color: rgb(32, 32, 32);
 }

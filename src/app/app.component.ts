@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Tour of Heroes';
-  public theme: string = 'lightTheme';
+  public theme: string = '';
 
   public toggleTheme(): void {
-    this.theme = this.theme === 'lightTheme' ? 'darkTheme' : 'lightTheme';
+    this.theme = this.theme === '' ? 'dark' : '';
   }
 }
