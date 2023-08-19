@@ -22,37 +22,38 @@ export class HeroService {
     private messageService: MessageService
   ) {}
 
-  getHeroes(): Observable<Hero[]> {
+  public getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
       tap(() => this.log('fetched heroes')),
       catchError(this.handleError<Hero[]>('getHeroes', []))
     );
   }
 
-  getHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
+  public getHero(id: number): Observable<Hero> {
+    const url: string = `${this.heroesUrl}/${id}`;
+
     return this.http.get<Hero>(url).pipe(
       tap(() => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );
   }
 
-  updateHero(hero: Hero): Observable<any> {
+  public updateHero(hero: Hero): Observable<any> {
     return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
       tap(() => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>('updateHero'))
     );
   }
 
-  addHero(hero: Hero): Observable<Hero> {
+  public addHero(hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
       tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
       catchError(this.handleError<Hero>('addHero'))
     );
   }
 
-  deleteHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
+  public deleteHero(id: number): Observable<Hero> {
+    const url: string = `${this.heroesUrl}/${id}`;
 
     return this.http.delete<Hero>(url, this.httpOptions).pipe(
       tap(() => this.log(`deleted hero id=${id}`)),
@@ -60,11 +61,9 @@ export class HeroService {
     );
   }
 
-  searchHeroes(term: string): Observable<Hero[]> {
-    if (!term.trim()) {
-      // if not search term, return empty hero array.
-      return of([]);
-    }
+  public searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim()) return of([]); // if not search term, return empty hero array.
+
     return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
       tap((x) =>
         x.length

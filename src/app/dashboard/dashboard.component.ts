@@ -10,17 +10,17 @@ import { Hero } from '../hero';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
-  heroes: Hero[] = [];
+  public heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.getHeroes();
   }
 
-  getHeroes(): void {
+  private getHeroes(): void {
     this.heroService
       .getHeroes()
-      .subscribe((heroes) => (this.heroes = heroes.slice(1, 5)));
+      .subscribe((heroes) => (this.heroes = heroes.slice(2, 6)));
   }
 }
