@@ -2,6 +2,11 @@
   <div *ngIf="hero">
     <h2 class="header" (click)="headerClick()">{{ hero.name | uppercase }} Details</h2>
     <div class="details"    *ngIf="this.detailToggel">soared through the sky, healing hearts with a touch of light.With kindness as his power, he brought hope to every soul in need.</div>
+    <div>id: {{ he
+<div class="hero-detail-container">
+  <div *ngIf="hero">
+    <h2 class="header" (click)="headerClick()">{{ hero.name | uppercase }} Details</h2>
+    <div class="details"    *ngIf="this.detailToggel">soared through the sky, healing hearts with a touch of light.With kindness as his power, he brought hope to every soul in need.</div>
     <div>id: {{ hero.id }}</div>
     <div>
       <label for="hero-name">Hero name: </label>
@@ -11,4 +16,3 @@
   <button class="left" type="button" (click)="goBack()">go back</button>
   <button class="right" type="button" (click)="save()">save</button>
 </div>
-
