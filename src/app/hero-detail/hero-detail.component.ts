@@ -20,6 +20,12 @@ export class HeroDetailComponent implements OnInit {
     private location: Location
   ) {}
 
+  //""§"§RWERWERWERWRWER
+  //""§"§RWERWERWERWRWER
+  //""§"§RWERWERWERWRWER
+  //""§"§RWERWERWERWRWER
+  //""§"§RWERWERWERWRWER
+
   public ngOnInit(): void {
     this.getHero();
   }
