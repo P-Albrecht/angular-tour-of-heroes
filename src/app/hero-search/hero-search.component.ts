@@ -18,6 +18,11 @@ export class HeroSearchComponent implements OnInit {
 
   constructor(private heroService: HeroService) {}
 
+  //!!!!!!!!!!!!!!!!!!!
+  //!!!!!!!!!!!!!!!!!!!
+  //!!!!!!!!!!!!!!!!!!!
+  //!!!!!!!!!!!!!!!!!!!
+  
   public ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
